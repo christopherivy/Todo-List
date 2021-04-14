@@ -1,7 +1,7 @@
 const input = document.querySelector("#taskAdd");
 const ul = document.querySelector("#todo-list");
-
 const removeButtons = document.querySelectorAll("li buttons");
+const previousItems = [];
 
 addItem.addEventListener("click", function (e) {
 	e.preventDefault();
@@ -43,6 +43,7 @@ addItem.addEventListener("click", function (e) {
 	}
 
 	//this area is setting for localStorage
-	const previousItems = JSON.parse(localStorage.getItem("todos")) || [];
-	previousItems.push();
+	previousItems.push(localStorage.setItem(newTask, newTask));
+
+	console.log(localStorage);
 });
